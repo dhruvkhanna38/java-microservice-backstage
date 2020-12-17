@@ -1,0 +1,12 @@
+{
+    "component_id":"java-microservice", 
+    "bamboo_project_key":"STOC",
+    "bamboo_build_plan_key":"CONFIGURE_MANUALLY",
+    "git_project_key":"SRED",
+    "telstra_user_id":"CONFIGURE_MANUALLY",
+    "group_id":"com.telstra.digitalservices",
+    "artifact_id":"java-microservice",
+    "application_name":"CONFIGURE_MANUALLY",
+    "application_title":"CONFIGURE_MANUALLY",
+    "application_description":"CONFIGURE_MANUALLY"
+}

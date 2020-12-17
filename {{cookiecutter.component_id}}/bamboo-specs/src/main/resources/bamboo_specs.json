@@ -1,0 +1,28 @@
+{
+  "projectName": "{{cookiecutter.application_name}}",
+  "projectKey": "{{cookiecutter.bamboo_project_key}}",
+  "masterPlanKey": "${masterPlanKey}",
+  "planName": "Bamboo Plan Name",
+  "planKey": "{{cookiecutter.bamboo_build_plan_key}}",
+  "defaultLinkedRepository": "LINKED REPOSITORY",
+  "linkedRepositories": ["LINKED REPOSITORY"],
+  "groupPermissions": [
+    {"name": "${bambooGroupId}", "type": "ADMIN"}
+  ],
+  "userPermissions": [
+    {"name": "{{cookiecutter.telstra_user_id}}", "type": "ADMIN"}
+  ],
+  "variables": [
+    {"key": "BAMBOO_ENV_BUILDER", "value": "amp-bamboo-build:1.0.1"},
+    {"key": "MAVEN_DOCKER_IMAGE", "value": "maven:3.6.3-jdk-8-slim"}
+  ],
+  "stages": [
+    {"name": "LibBuildStage"},
+    {"name": "BuildStage", "filePath": "./share/docker/buildDockerImage.sh"},
+    {"name": "DeployStage", "env": "dev", "isManual": true, "filePath": "./share/service/deploy-service.sh"},
+    {"name": "SVTCICDStage", "testType": ["shakeout"], "isManual": true},
+    {"name": "CRQiTAMStage", "isManual": true}
+  ],
+  "deployment":{"env": ["DEV", "UAT", "SVT", "SVTCICD", "SPT", "CRQiTAM","PROD"], "filePath": "./share/service/deploy-service.sh", "linkedRepository": ""},
+  "svtCicd": ["shakeout", "load", "soak", "linear", "auto_scaling", "mock_delay"]
+}

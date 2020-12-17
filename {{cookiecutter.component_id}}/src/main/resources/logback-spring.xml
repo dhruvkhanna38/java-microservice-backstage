@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <include resource="telstra-ms-logback-spring-included.xml" />
+    <logger name="com.telstra.digital" level="DEBUG" />
+
+</configuration>

@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: {{cookiecutter.application_name}}  
+server:
+  port: 8182
+telstra:
+  microservice:
+    corsAllow:
+      - http://localhost:4200
+      - http://test.telstra.com

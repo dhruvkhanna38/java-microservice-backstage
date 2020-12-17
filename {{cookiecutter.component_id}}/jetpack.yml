@@ -1,0 +1,77 @@
+survey:
+  ApplicationAccessibleOverInternet:
+    answer: Private/EDN
+    profile: NA
+  ApplicationDescription:
+    answer: {{cookiecutter.application_description}}
+    profile: NA
+  ApplicationName:
+    answer: {{cookiecutter.artifact_id}}
+    profile: NA
+  ApplicationStage:
+    answer: New
+    profile: NA
+  ApplicationType:
+    answer: service
+    profile: NA
+  BAU:
+    answer: ${businessUnit}
+    profile: NA
+  BusinessCritical:
+    answer: true
+    profile: ENHANCED
+  BusinessRiskConsequence:
+    answer: Major
+    profile: STANDARD
+  ClairScanner:
+    answer: true
+    profile: NA
+  DoesPIA:
+    answer: false
+    profile: NA
+  HawkeyeScanner:
+    answer: true
+    profile: NA
+  ImageToScanUsingClair:
+    answer: docker
+    profile: NA
+  ImageVersion:
+    answer: 67ty098
+    profile: NA
+  InformationClassification:
+    answer: Confidential
+    profile: STANDARD
+  LegacySystems:
+    answer: true
+    profile: NA
+  ProjectName:
+    answer: {{cookiecutter.artifact_id}}
+    profile: NA
+  SonarQubeScanner:
+    answer: true
+    profile: NA
+  SourceClear:
+    answer: true
+    profile: NA
+  SourceClearWorkspaceName:
+    answer: ${SourceClearWs}
+    profile: NA
+  TargetPlatform:
+    answer: AMP Naked
+    profile: NA
+  TeamGroupEmail:
+    answer: ${teamLeadEmail}
+    profile: NA
+  TeamLeadEmail:
+    answer: ${teamLeadEmail}
+    profile: NA
+  TeamName:
+    answer: ${teamName}
+    profile: NA
+  TelstraRetailOrWholesaleUse:
+    answer: Both
+    profile: NA
+  UsesDockerImages:
+    answer: true
+    profile: NA
+version: v1.0

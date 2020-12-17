@@ -1,0 +1,67 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: java-microservice
+  title: Java Microservice
+  description: This project creates java-microservice
+  tags:
+    - experimental
+    - java
+spec:
+  owner: Stockholm@team.telstra.com
+  templater: cookiecutter
+  type: service
+  path: "."
+  schema:
+    required:
+      - component_id
+      - bamboo_project_key
+      - bamboo_build_plan_key
+      - git_project_key
+      - telstra_user_id
+      - group_id
+      - artifact_id
+      - application_name
+      - application_title
+      - application_description
+    properties:
+      component_id:
+        title: Project Directory Name
+        type: string
+        description: Name of your project directory
+      bamboo_project_key:
+        title: Bamboo Project Key 
+        type: string
+        description: Bamboo project key (try use your existing project e.g. STOC)
+      bamboo_build_plan_key:
+        title: Bamboo Build Plan Key
+        type: string
+        description: Bamboo build plan key (e.g. MYSERVICEV2)
+      git_project_key:
+        title: Git Project Key
+        type: string
+        description: Git Project Key (e.g. SRED)
+      telstra_user_id:
+        title: Telstra DID
+        type: string
+        description: Your ACCOUNT-01 userId (e.g. d123456)
+      group_id: 
+        title: Group ID
+        type: string
+        description: Group Id (e.g. com.telstra.digitalservices)
+      artifact_id:
+        title: Artifact ID
+        type: string
+        description: Artifact Id (e.g.java-microservice)
+      application_name:
+        title: Application Name
+        type: string
+        description: Application Name (e.g. Preaid mobile Service Activation)
+      application_title:
+        title: Application title
+        type: string
+        description: Application Title (e.g. Mobile Activation Service)
+      application_description:
+        title: Application description
+        type: string
+        description: Description of the service (e.g. This service activates the mobile SIM)

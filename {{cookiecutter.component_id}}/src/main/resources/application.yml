@@ -1,0 +1,9 @@
+telstra:
+  microservice:
+    name: {{cookiecutter.artifact_id}}
+    title: {{cookiecutter.application_title}}
+    description: {{cookiecutter.application_description}}
+    apiVersion: 1
+    basepath: /hello/v1
+    hasApidoc: true
+    respondTo: {{cookiecutter.artifact_id}}.v1.process
